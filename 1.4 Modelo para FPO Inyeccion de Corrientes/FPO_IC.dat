@@ -1,0 +1,59 @@
+# Lectura de los datos del sistema
+ include sistema14nos_nesta.dat;
+# include sistema30nos_nesta.dat;
+# include sistema57nos_nesta.dat;
+# include sistema118nos_nesta.dat;
+
+# Cálculo de los parametros de la linea
+for {(k,i,j) in RAM} {
+	let bsh[k,i,j] := bsh[k,i,j]/2;
+	let SMAX[k,i,j] := SMAX[k,i,j]/Sbase;
+}
+
+for {(k,i,j) in RAM} {
+	let g[k,i,j] := r[k,i,j]/(r[k,i,j]^2 + x[k,i,j]^2);
+	let b[k,i,j] := -x[k,i,j]/(r[k,i,j]^2 + x[k,i,j]^2);
+}
+
+# Colocar los datos en p.u.
+for {i in BAR} {
+	let Pd[i] := Pd[i]/Sbase;
+	let Qd[i] := Qd[i]/Sbase;
+	let Pgm[i] := Pgm[i]/Sbase;
+	let PgM[i] := PgM[i]/Sbase;
+	let Qgm[i] := Qgm[i]/Sbase;
+	let QgM[i] := QgM[i]/Sbase;
+}
+
+# Colocar los angulos de los desfasadores en radianes
+let {(k,i,j) in RAM}
+	fi[k,i,j] := (fi[k,i,j]*3.14159265359)/180;
+
+# Taps
+let {(k,i,j) in RAM: ntap[k,i,j] <> 0}
+	ntap[k,i,j] := 16;
+
+let {(k,i,j) in RAM: ntap[k,i,j] == 0}
+	ntap[k,i,j] := 1;
+	
+let {(k,i,j) in RAM: a[k,i,j] <> 0}
+	a[k,i,j] := 1 / a[k,i,j];
+
+let {(k,i,j) in RAM: rMtap[k,i,j] <> 0}
+	reg[k,i,j] := 0.1;
+
+let {(k,i,j) in RAM: rMtap[k,i,j] == 0}
+	reg[k,i,j] := 0;
+
+fix {i in BAR: tipo[i] == 3}
+	Vim[i] := 0;
+
+fix {(k,i,j) in RAM: reg[k,i,j] == 0}
+	nt[k,i,j] := 0;
+
+fix {i in BAR: PgM[i] == 0 && Qgm[i] == 0 && QgM[i] == 0} ISre[i] := 0;
+fix {i in BAR: PgM[i] == 0 && Qgm[i] == 0 && QgM[i] == 0} ISim[i] := 0;
+
+# Demanda de correntes nulas en las barras de carga sin carga
+fix {i in BAR: Pd[i] == 0 && Qd[i] == 0} IDre[i] := 0;
+fix {i in BAR: Pd[i] == 0 && Qd[i] == 0} IDim[i] := 0;

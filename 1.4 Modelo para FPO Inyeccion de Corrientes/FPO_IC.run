@@ -1,0 +1,19 @@
+# Elimina todos los elementos de la memória
+reset;
+
+# Carga el modelo FPO_IC
+model FPO_IC.mod;
+
+# Carga los datos
+data FPO_IC.dat;
+
+# Define el solver y las configuraciones
+
+	option solver knitro;
+	option knitro_options "feastol=1e-8 opttol=1e-8 mip_integral_gap_abs=1e-8";
+
+# Soluciona el modelo
+solve custo_generacion;
+
+# Muestra los resultados
+include FPO_IC.inc;
