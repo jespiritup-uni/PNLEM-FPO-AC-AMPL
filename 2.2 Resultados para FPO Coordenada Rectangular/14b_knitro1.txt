@@ -1,0 +1,233 @@
+ampl "C:\Users\gfpue\OneDrive\Área de Trabalho\joseph\PNLIM\1.3 Modelo para FPO Coordenada Retangular TAP_v1\FPO_CR.run"
+Process started (PID=5464) >>>
+Artelys Knitro 14.2.0: 
+=======================================
+          Commercial License
+         Artelys Knitro 14.2.0
+=======================================
+
+No start point provided -- Knitro computing one.
+
+WARNING: Problem appears to have nonlinear equalities and be non-convex.
+         The Knitro mixed integer solver is designed for convex problems.
+         For non-convex problems it is only a heuristic, and the reported
+         bounds and optimality claims cannot be verified.
+
+concurrent_evals         0
+datacheck                0
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+Knitro changing mip_method from AUTO to 1.
+Knitro changing mip_rootalg from AUTO to 1.
+Knitro changing mip_lpalg from AUTO to 3.
+Knitro changing mip_branchrule from AUTO to 2.
+Knitro changing mip_selectrule from AUTO to 2.
+Knitro changing mip_mir from AUTO to 2.
+Knitro changing mip_clique from AUTO to 0.
+Knitro changing mip_zerohalf from AUTO to 0.
+Knitro changing mip_liftproject from AUTO to 0.
+Knitro changing mip_knapsack from AUTO to 2.
+Knitro changing mip_gomory from AUTO to 0.
+Knitro changing mip_cut_flowcover from AUTO to 2.
+Knitro changing mip_cut_probing from AUTO to 1.
+Knitro changing mip_rounding from AUTO to 3.
+Knitro changing mip_heuristic_strategy from AUTO to 1.
+Knitro changing mip_heuristic_feaspump from AUTO to 1.
+Knitro changing mip_heuristic_misqp from AUTO to 0.
+Knitro changing mip_heuristic_mpec from AUTO to 1.
+Knitro changing mip_heuristic_diving from AUTO to 0.
+Knitro changing mip_heuristic_lns from AUTO to 0.
+Knitro changing mip_heuristic_localsearch from AUTO to 1.
+Knitro changing mip_pseudoinit from AUTO to 1.
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  linear
+Number of variables:                                169 (         169)
+    bounded below only:                               0 (           0)
+    bounded above only:                               0 (           0)
+    bounded below and above:                         25 (          25)
+    fixed:                                            0 (           0)
+    free:                                           144 (         144)
+Number of binary variables:                           1 (           1)
+Number of integer variables:                          3 (           3)
+Number of constraints:                              199 (         199)
+    linear equalities:                               58 (          58)
+    quadratic equalities:                            98 (          98)
+    gen. nonlinear equalities:                        3 (           3)
+    linear one-sided inequalities:                    0 (           0)
+    quadratic one-sided inequalities:                40 (          40)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                     719 (         719)
+Number of nonzeros in Hessian:                      195 (         195)
+
+Knitro using Branch and Bound method with 8 threads.
+
+Initial points
+--------------
+No initial point provided for the root node relaxation.
+No primal point provided for the MIP.
+
+Root node relaxation
+--------------------
+
+ Iter      Objective      Feasibility        Optimality       Time 
+                             error              error        (secs)
+ ----      ---------      -----------        ----------      ------
+    1        132.169          10.5774           4.33931       0.005
+    2        117.875          10.3278           21.7787       0.006
+    3        117.013          10.1151           22.7557       0.006
+    4        122.550          10.0089           37.8878       0.006
+    5        139.547          9.83025           30.9139       0.006
+    6        141.899          9.80459           33.3969       0.221
+    7        140.203          9.78356           71.5856       0.222
+    8        138.977          9.77425           70.8376       0.222
+    9        140.208          6.80389           42.3179       0.222
+   10        148.043          6.76192           68.5215       0.223
+   11        139.699          6.76066           85.3318       0.223
+   12        134.786          6.75376           85.3220       0.223
+   13        125.974          4.69133           46.6415       0.223
+   14        134.257          4.61436           46.6415       0.224
+   15        136.453          4.59436           46.6415       0.224
+   16        139.693          4.57288           49.5952       0.224
+   17        143.156          4.54842           64.0937       0.224
+   18        144.398          4.54610           70.4028       0.224
+   19        143.949          4.52893           97.4238       0.225
+   20        143.270          4.50719           127.456       0.225
+   30        134.049          3.08197           139.596       0.228
+   40        114.853          2.27414           230860.       0.231
+   50        123.296          2.10589           2203.53       0.234
+   60        196.197          1.38826           320.123       0.235
+   70        243.130          1.17497           20.2331       0.238
+   80        249.590         0.479436           341.487       0.240
+   90        262.576         0.260042           470.153       0.241
+  100        236.834      8.28127e-02           534.326       0.242
+  110        243.925      2.46661e-03           5.80583       0.243
+
+Tree search
+-----------
+
+       Nodes        Best solution   Best bound      Gap       Time 
+   Expl  |  Unexpl      value         value                  (secs)
+   ---------------  -------------   ----------      ---      ------
+      1       2      243.969 FCRD         -inf                0.251
+      7       6      243.966 DDRD         -inf                0.268
+     13       0      243.966           243.966     -0.00%     0.273
+
+EXIT: Optimal solution found (assuming convexity).
+
+HINT: The problem may be a non-convex mixed-integer problem.  Set
+      mip_multistart=1 to enable a mixed-integer multistart heuristic,
+      which may improve the chances of finding the global solution.
+
+Final Statistics for MIP
+------------------------
+Final objective value               =  2.43966338286875e+02
+Final bound value                   =  2.43966338286875e+02
+Final optimality gap (abs / rel)    =  -1.99e-13 / -8.15e-16 (-0.00%)
+# of root cutting plane rounds      =  1
+# of restarts                       =  0
+# of nodes processed                =  13 (0.283s)
+# of strong branching evaluations   =  0 (0.000s)
+# of function evaluations           =  296 (0.001s)
+# of gradient evaluations           =  281 (0.000s)
+# of hessian evaluations            =  251 (0.001s)
+# of hessian-vector evaluations     =  0
+# of subproblems processed          =  15 (0.314s)
+Total program time (secs)           =  0.273 (0.844 CPU time)
+Time spent in evaluations (secs)    =  0.002
+
+Cuts statistics (gen / add)
+---------------------------
+Knapsack cuts                       =  0 / 0
+Mixed-integer rounding cuts         =  0 / 0
+Flow-cover cuts                     =  0 / 0
+Probing cuts                        =  0 / 0
+
+Heuristics statistics (calls / successes / time)
+------------------------------------------------
+Feasibility pump                    =  1 / 0 / 0.006s
+Rounding heuristic                  =  1 / 1 / 0.004s
+MPEC heuristic                      =  0 / 0 / 0.000s
+Local search heuristic              =  5 / 0 / 0.018s
+
+======================================================Knitro 14.2.0: Locally optimal or satisfactory solution.
+objective 243.9663383; optimality gap -1.99e-13
+13 nodes; 15 subproblem solves
+
+suffix feaserror OUT;
+suffix opterror OUT;
+suffix numfcevals OUT;
+suffix numiters OUT;
+suffix incumbent OUT;
+suffix relaxbnd OUT;
+
+================================================================
+RESUMEN DEL MODELO FLUJO DE POTENCIA OPTIMA BASADO EN COORDENADAS RECTANGULARES
+================================================================
+Costo de Generacion (US$/h)         : 243.966338
+
+Perdidas            (MW)         :   12.2335
+
+TENSION Y ANGULO EN LA BARRA 
+barra     V[pu]    theta[grau]   Pger[MW]     Qger[MW]      w                Balance activo                          Balance reactivo
+    1      1.0600       0.0000     208.2335       0.0000       0.0000    0.00000000000000000000    0.00000000000000000000
+    2      1.0386      -4.2183      63.0000      16.0423       0.0000    0.00000000000000000000    0.00000000000000000694
+    3      1.0078     -12.1683       0.0000      28.5148       0.0000    0.00000000000000005551   -0.00000000000000000694
+    4      1.0136      -9.7750       0.0000       0.0000       0.0000   -0.00000000000000008327    0.00000000000000000000
+    5      1.0194      -8.3192       0.0000       0.0000       0.0000    0.00000000000000011102   -0.00000000000000000087
+    6      1.0571     -13.9056       0.0000      24.0000       0.0000    0.00000000000000005551   -0.00000000000000001388
+    7      1.0409     -12.9526       0.0000       0.0000       0.0000    0.00000000000000000000    0.00000000000000000000
+    8      1.0600     -12.9526       0.0000      11.5175       0.0000    0.00000000000000000000    0.00000000000000000000
+    9      1.0478     -14.5587       0.0000       0.0000       1.0000    0.00000000000000002776    0.00000000000000005551
+   10      1.0420     -14.7367       0.0000       0.0000       0.0000    0.00000000000000000000    0.00000000000000000173
+   11      1.0460     -14.4579       0.0000       0.0000       0.0000    0.00000000000000000000    0.00000000000000000000
+   12      1.0425     -14.7721       0.0000       0.0000       0.0000   -0.00000000000000000867    0.00000000000000000173
+   13      1.0380     -14.8532       0.0000       0.0000       0.0000   -0.00000000000000000694   -0.00000000000000000520
+   14      1.0254     -15.7074       0.0000       0.0000       0.0000    0.00000000000000000000    0.00000000000000000000
+
+
+FLUJO DE POTENCIA ACTIVA Y REACTIVA, PERDIDAS Y ANGULOS
+     i      j        Pij[MW]        Pji[MW]       Qij[MVAr]      Qji[MVAr]     Pls[MW]     Qls[MVAr]       Tap       Pos_tap       Ang[graus]
+    1     2     136.4407     -133.2295       -4.2360        8.2263        3.2112        3.9903        1.0000        0.0000        4.2183
+    1     5      71.7928      -69.2908        4.2360        0.7722        2.5020        5.0082        1.0000        0.0000        8.3192
+    2     3      73.9948      -71.6037        1.3042        4.1830        2.3911        5.4872        1.0000        0.0000        7.9500
+    2     4      57.3615      -55.5879       -3.1928        4.9943        1.7736        1.8015        1.0000        0.0000        5.5567
+    2     5      43.1731      -42.1884       -2.9954        2.3383        0.9848       -0.6571        1.0000        0.0000        4.1009
+    3     4     -22.5963       22.9567        5.3318       -5.7192        0.3605       -0.3874        1.0000        0.0000       -2.3933
+    4     5     -60.4739       60.9537        5.8804       -4.3671        0.4797        1.5133        1.0000        0.0000       -1.4558
+    4     7      27.7884      -27.7884      -15.4331       17.5158        0.0000        2.0827        0.9938       -1.0000        3.1775
+    4     9      17.5166      -17.5166       14.1776      -11.9053       -0.0000        2.2723        1.1000       16.0000        4.7837
+    5     6      42.9255      -42.9255       -0.3434        4.5455        0.0000        4.2022        1.0312        5.0000        5.5864
+    6    11       6.6684       -6.6242        2.7426       -2.6501        0.0442        0.0925        1.0000        0.0000        0.5523
+    6    12       7.6748       -7.6036        2.4148       -2.2666        0.0712        0.1482        1.0000        0.0000        0.8665
+    6    13      17.3823      -17.1761        6.7971       -6.3910        0.2062        0.4061        1.0000        0.0000        0.9477
+    7     8       0.0000        0.0000      -11.3095       11.5175        0.0000        0.2080        1.0000        0.0000        0.0000
+    7     9      27.7884      -27.7884       -6.2063        7.0295        0.0000        0.8232        1.0000        0.0000        1.6062
+    9    10       5.9010       -5.8836        5.0145       -4.9683        0.0174        0.0462        1.0000        0.0000        0.1780
+    9    14       9.9040       -9.7708        4.1223       -3.8389        0.1332        0.2834        1.0000        0.0000        1.1487
+   10    11      -3.1164        3.1242       -0.8317        0.8501        0.0079        0.0184        1.0000        0.0000       -0.2788
+   12    13       1.5036       -1.4981        0.6666       -0.6616        0.0055        0.0050        1.0000        0.0000        0.0812
+   13    14       5.1742       -5.1292        1.2526       -1.1611        0.0450        0.0915        1.0000        0.0000        0.8541
+
+
+Balance activa
+
+Balance reactiva
+
+Violacion de tension
+
+Violacion de generacion
+
+Violacion de capacidad de la linea
+
+Total CPU time:      0.89s
+Elapsed time :      0.30s
+=========================================================================================================================================================================
+<<< Process finished (PID=5464). (Exit code 0)
+================ READY ================
